@@ -52,6 +52,7 @@ public class Admin
     public static void userReportForAdmin()
     {
         System.out.println("Report Of License");
+        System.out.println("Total No of Users: "+NormalUser.applicationDetails.size());
         for(user usr:user.UserDetail)
         {
             for(Application app:NormalUser.applicationDetails)
@@ -69,9 +70,9 @@ public class Admin
                     System.out.println("Category: "+app.category);
                     System.out.println("License Status: "+app.status);
                     System.out.println("Issue Date: "+app.issueDate);
-                    if(app.status.equalsIgnoreCase("Accepted"))
+                    if (app.status.equalsIgnoreCase("Approved"))
                     {
-                    System.out.println("Expiry Date: "+app.expiryDate);
+                        System.out.println("Expiry Date: "+app.expiryDate); //I have made some changes here
                     }
 
                 }
