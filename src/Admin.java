@@ -72,7 +72,7 @@ public class Admin
                     System.out.println("Issue Date: "+app.issueDate);
                     if (app.status.equalsIgnoreCase("Approved"))
                     {
-                        System.out.println("Expiry Date: "+app.expiryDate); //I have made some changes here
+                        System.out.println("Expiry Date: "+app.expiryDate);
                     }
 
                 }
