@@ -47,7 +47,7 @@ int role;
         String password=sc.next();
         for(user i:user.UserDetail)
         {
-            if ((Objects.equals(i.userID, userID)) && (Objects.equals(i.password,password)))
+            if ((i.userID.equalsIgnoreCase(userID) ) && (Objects.equals(i.password,password)))
             {
                 isLogin=true;
                 System.out.println("Welcome "+i.name+" !!!");
