@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 public class user
 {
+    static int userCounter = 1;
     static ArrayList<user> UserDetail=new ArrayList<>();
 String userID,citizenshipNumber,password,name,email;
 int role;
@@ -72,11 +73,11 @@ int role;
             }
         } while (roleChoice != 1 && roleChoice != 2);
 
-        String userID = "U" + (UserDetail.size() + 1);
+        String userID = "U" + (userCounter);
+        userCounter++;
         System.out.println("Your UserID is: " + userID);
+        new user(name, userID, citizenshipID, roleChoice, password, email);
         System.out.println("User Registered Successfully!!!");
-
-        UserDetail.add(new user(name, userID, citizenshipID, roleChoice, password, email));
     }
 
     public static boolean isValidEmail(String email)

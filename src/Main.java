@@ -4,8 +4,5 @@ public class Main
     {
         menu.mainMenu();
     }
-
-
-
 }
 
