@@ -107,14 +107,10 @@ int role;
                 else
                 {
                     Admin.AdminMenu();
-
                 }
                 return;
 
                 }
-
-
-
         }
         if(!isLogin)
                 {
