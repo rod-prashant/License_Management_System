@@ -67,6 +67,7 @@ public class Admin
                     System.out.println("User ID: "+usr.userID);
                     System.out.println("Citizenship Number: "+usr.citizenshipNumber);
                     System.out.println("Email: "+usr.email);
+                    System.out.println("Date Of birth: "+usr.dateOfBirth);
                     System.out.println("Category: "+app.category);
                     System.out.println("License Status: "+app.status);
                     System.out.println("Issue Date: "+app.issueDate);
@@ -74,6 +75,7 @@ public class Admin
                     {
                         System.out.println("Expiry Date: "+app.expiryDate);
                     }
+                    System.out.println("---------------------------");
                 }
 
                 }

@@ -7,7 +7,7 @@ public class NormalUser
 {
     public static ArrayList<Application> applicationDetails=new ArrayList<>();
    static  Scanner sc=new Scanner(System.in);
-    public static void userMenu(String userID,String name)
+    public static void userMenu(String userID,String name,String dateOfBirth)
     {
         System.out.println("User Name: "+name);
         System.out.println("1. Apply For License");
@@ -16,14 +16,23 @@ public class NormalUser
         int userChoice=sc.nextInt();
         if (userChoice==1)
         {
+            int age=AgeCalculator.calculateAge(dateOfBirth);
+            if(age>=18)
+            {
             NormalUser.applyForCategory(userID);
-            NormalUser.userMenu(userID,name);
+            NormalUser.userMenu(userID,name,dateOfBirth);
+            }
+            else
+            {
+                System.out.println("You age must be above 18 or 18");
+            }
+
 
         }
         else if (userChoice==2)
         {
             NormalUser.report(userID);
-            NormalUser.userMenu(userID,name);
+            NormalUser.userMenu(userID,name,dateOfBirth);
 
         }
         else
