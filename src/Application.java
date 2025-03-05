@@ -4,10 +4,10 @@
     {
         String UserID;
         String ApplicationID;
-        String category,issueDate;
+        String category;
         String status;
-        LocalDate expiryDate;
-        public Application(String applicationID, String category, String issueDate, String UserID, LocalDate expiryDate) {
+        LocalDate issueDate, expiryDate;
+        public Application(String applicationID, String category, LocalDate issueDate, String UserID, LocalDate expiryDate) {
             this.ApplicationID = applicationID;
             this.category = category;
             this.issueDate=issueDate;

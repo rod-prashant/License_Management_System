@@ -49,10 +49,9 @@ public class NormalUser
                 return;
             }
         }
-        System.out.println("Enter Issue Date(YYYY-MM-DD): ");
-        String issueDate=sc.next();
-        LocalDate date = LocalDate.parse(issueDate);
-        LocalDate expiryDate = date.plusYears(5);
+        LocalDate issueDate=LocalDate.now();
+
+        LocalDate expiryDate = issueDate.plusYears(5);
         String applicationID="A"+(applicationDetails.size()+1);
         System.out.println("Your Application ID is: "+applicationID);
         System.out.println("Successfully Registered License for User ID: "+UserID);
